@@ -1,0 +1,10 @@
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+#export VAULT_ADDR='http://51.138.85.60/'
+export VAULT_ADDR='https://secrets.connected.bmw/'
+export HELM_SECRETS_DRIVER='vault'
+export EDITOR=nano
+export VAGRANT_ALIAS_FILE=~/.dotfiles/files/vagrant-aliases
+#personal info
+export AD_USER='ctw01537'
