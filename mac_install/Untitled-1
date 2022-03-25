@@ -1,8 +1,0 @@
-docker build -f src/1-Application/PrivateChargingTariffsCompositeService.Application.WebApi/Dockerfile --tag testam.azurecr.io/privatechargingtariffscompositeservice:staging-eu --tag testam.azurecr.io/privatechargingtariffscompositeservice:latest .
-
-export BMWAF_NUGET_USER=
-export BMWAF_NUGET_PASS=
-export
-
-api_key= AKCp5cbwQptphmFaeYeZFon3QxdyMwEQtYZwJcskZFj8h1w3GMptxEzVaWQPJUxJPP4StcJwx
-nugget_key = Hf4GjIYYpDyaKlUlDATBWHuUKggDRzUco68hnTKlT1rPXlIgrSWDMZmR5X02pwO986LeybjZiRPAkwShNjQCwv7YEF5gXjwktn/BuEo/jq8Lj3xApdZLHOMYlyMYBCHntm1VJVSfcQEWvnIBUs0+X52WtTAmG24q8NDaqqigbt1TLz+/HF5bcWukHNrsiZq0MycQTTRSY/o13ckgW786gpeWIwm/ic+7FTWnURaipSji0f8soNeKwJHLq0z8xGL9oZdpjQWmuaXaTCiprJHADukrIpDSsv1Nv7/x9eNHOD917Mz+r+J7UotPqsoxbLnFwxG+aDsO/xr2GociFtJYvizmuQ1U47odjp4wM5TZbnQ=
