@@ -5,9 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export KUBE_EDITOR='vim'
 export AD_USER='ctw01535'
+export USER='qxz20hw'
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.oh-my-zsh
+export BMW_SKIP_PROXY=true
 #export KUBECONFIG=$HOME/kubernetes/configs/kubeconfig
 export ZSH_MOTD_CUSTOM=batatas
 export REQUESTS_CA_BUNDLE="$HOME/.mac-ca-roots"
@@ -18,7 +21,7 @@ SPACESHIP_ROOT=$ZSH_CUSTOM/themes/spaceship-prompt
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #set the array of all zsh plugins you want to install
-plugins=(git docker battery pip python vagrant zsh-autosuggestions zsh-syntax-highlighting zsh-completions copydir tmux)
+plugins=(git docker battery pip python vagrant zsh-autosuggestions zsh-syntax-highlighting zsh-completions copypath tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,6 +35,25 @@ alias debugvm_nadly='ssh bmw@btcnadly-debug.centralus.cloudapp.azure.com'
 alias ssh_github='ssh azureuser@51.124.107.250'
 alias fly_login='fly -t genesis login -n mesh-framework -k -c https://btcgenesis.westeurope.cloudapp.azure.com'
 alias jmeter='open /usr/local/bin/jmeter'
+alias updateSupport='sudo ~/Workspace/ISEP/INSIS/insis_2022/updateSupport'
+alias wso2_main='cd /Library/WSO2/EnterpriseIntegrator/6.6.0'
+alias wso2_workspace='cd /Users/ctw01537-admin/IntegrationStudio/8.0.0/workspace/insis_2022'
+
+# -------- SOF FDLGATE ---------
+func() {
+    echo "Cloning repo fdlgate/$1 using your bmwbucket host ssh config!"
+    echo ''
+    git clone bmwbucket:fdlgate/$1
+    echo ''
+    echo 'Clone complete. Enjoy ;) '
+}
+alias fdlclone='func $1'
+alias awsImportEksConfigs='~/JoseOliveira/Utils/awsImportEksConfigs.sh'
+# AWS
+export AWS_DEFAULT_REGION=eu-central-1
+export AWS_PROFILE=fdlgate-dev-admin
+
+# -------- EOF FDLGATE ---------
 
 #place any "secret" environment variables in localrc so they don't get accidentally committed
 if [[ -a ~/.localrc ]]
@@ -83,3 +105,4 @@ neofetch
 #    tmux attach -t TMUX || tmux new -s TMUX
 #fi
 command -v flux >/dev/null && . <(flux completion zsh)
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
